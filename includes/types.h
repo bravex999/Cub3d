@@ -3,11 +3,11 @@
 
 # include <stdbool.h>
 
-typedef struct s_vec
+typedef struct s_vec2
 {
 	float	x;
 	float	y;
-}	t_vec;	
+}	t_vec2;	
 
 typedef struct s_color
 {
@@ -42,7 +42,7 @@ typedef enum e_tex_id
 	TEX_SO = 1,
 	TEX_WE = 2,
 	TEX_EA = 3
-}	t_text_id;
+}	t_tex_id;
 
 typedef struct s_texture_paths
 {
@@ -56,7 +56,7 @@ typedef struct s_map
 {
 	char	**grid;
 	int		width;
-	int		heigth;
+	int		height;
 	int		spawn_x;
 	int		spawn_y;
 	char	spawn_dir;
@@ -73,7 +73,7 @@ typedef struct s_scene
 {
 	t_map		map;
 	t_player	player;
-	t_texture	texture[4];
+	t_texture	textures[4];
 	t_color		floor;
 	t_color		ceiling;
 	t_image		frame;
