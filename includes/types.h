@@ -5,8 +5,8 @@
 
 typedef struct s_vec2
 {
-	float	x;
-	float	y;
+	double	x;
+	double	y;
 }	t_vec2;	
 
 typedef struct s_color
