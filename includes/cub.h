@@ -9,5 +9,6 @@
 #include "utils/error.h"
 #include "types.h"
 #include "scalar.h"
+#include "get_next_line.h"
 
 #endif
