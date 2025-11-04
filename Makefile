@@ -1,28 +1,27 @@
 NAME        = cub3d
 CC          = cc
 CFLAGS      = -Wall -Werror -Wextra
-INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR)
+INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR) -I $(DIR_GNL)
 
-# Directorios (11 módulos del plan)
-DIR_CORE    = src/core              # hooks + cleanup + main
-DIR_UTILS   = src/utils             # utils/error
-DIR_MATH    = src/math/scalar       
-DIR_PARSER  = src/parser            # io/parse_cub
-DIR_VALIDATE= src/validate                # io/validate_map
-DIR_GFX     = src/gfx               # gfx/mlx_init
-DIR_TEX     = src/textures          # textures/load
-DIR_CAMERA  = src/camera            # camera/player_setup
-DIR_RENDER  = src/render            # render/core
-DIR_INPUT   = src/input             # input + collision
+DIR_CORE    = srcs/core
+DIR_UTILS   = srcs/utils
+DIR_MATH    = srcs/math/scalar       
+DIR_PARSER  = srcs/parser
+DIR_VALIDATE= srcs/validate
+DIR_GFX     = srcs/gfx
+DIR_TEX     = srcs/textures
+DIR_CAMERA  = srcs/camera
+DIR_RENDER  = srcs/render
+DIR_INPUT   = srcs/input
+DIR_GNL		= srcs/gnl
 
 # MiniLibX (Linux)
 MLX_DIR     = libs/mlx/minilibx-linux
-MLX_LIB     = -L$(MLX_DIR) -lmlx_Linux -lX11 -lXext -lm -lz
+MLX_LIB     = -L$(MLX_DIR) -lmlx_Linux -lXext -lX11 -lm -lz
 
 LIBFT_DIR   = libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-# Fuentes por módulo (ajusta a tus nombres reales)
 SRCS_CORE    = 
 SRCS_UTILS   = 
 SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
@@ -33,6 +32,8 @@ SRCS_TEX     =
 SRCS_CAMERA  = 
 SRCS_RENDER  = 
 SRCS_INPUT   = 
+SRCS_GNL     = get_next_line.c
+	
 
 SRCS = \
   $(addprefix $(DIR_CORE)/,$(SRCS_CORE)) \
@@ -44,10 +45,11 @@ SRCS = \
   $(addprefix $(DIR_TEX)/,$(SRCS_TEX)) \
   $(addprefix $(DIR_CAMERA)/,$(SRCS_CAMERA)) \
   $(addprefix $(DIR_RENDER)/,$(SRCS_RENDER)) \
-  $(addprefix $(DIR_INPUT)/,$(SRCS_INPUT))
+  $(addprefix $(DIR_INPUT)/,$(SRCS_INPUT)) \
+  $(addprefix $(DIR_GNL)/,$(SRCS_GNL))
 
 OBJS    = $(SRCS:.c=.o)
-HEADERS = $(wildcard include/*.h)
+HEADERS = $(wildcard includes/*.h) $(wildcard $(DIR_GNL)/*.h)
 
 all: $(NAME)
 
