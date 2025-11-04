@@ -1,14 +1,14 @@
 NAME        = cub3d
 CC          = cc
 CFLAGS      = -Wall -Werror -Wextra
-INCLUDES    = -I include -I $(MLX_DIR)
+INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR)
 
 # Directorios (11 módulos del plan)
 DIR_CORE    = src/core              # hooks + cleanup + main
 DIR_UTILS   = src/utils             # utils/error
 DIR_MATH    = src/math/scalar       
-DIR_IO      = src/io                # io/parse_cub
-DIR_VALIDATE= src/io                # io/validate_map
+DIR_PARSER  = src/parser            # io/parse_cub
+DIR_VALIDATE= src/validate                # io/validate_map
 DIR_GFX     = src/gfx               # gfx/mlx_init
 DIR_TEX     = src/textures          # textures/load
 DIR_CAMERA  = src/camera            # camera/player_setup
@@ -26,7 +26,7 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 SRCS_CORE    = 
 SRCS_UTILS   = 
 SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
-SRCS_IO      = 
+SRCS_PARSER  = parse_cub_detect.c
 SRCS_VALIDATE= 
 SRCS_GFX     = 
 SRCS_TEX     = 
@@ -38,7 +38,7 @@ SRCS = \
   $(addprefix $(DIR_CORE)/,$(SRCS_CORE)) \
   $(addprefix $(DIR_UTILS)/,$(SRCS_UTILS)) \
   $(addprefix $(DIR_MATH)/,$(SRCS_MATH)) \
-  $(addprefix $(DIR_IO)/,$(SRCS_IO)) \
+  $(addprefix $(DIR_PARSER)/,$(SRCS_PARSER)) \
   $(addprefix $(DIR_VALIDATE)/,$(SRCS_VALIDATE)) \
   $(addprefix $(DIR_GFX)/,$(SRCS_GFX)) \
   $(addprefix $(DIR_TEX)/,$(SRCS_TEX)) \
