@@ -9,7 +9,7 @@
 /*   Updated: 2024/10/30 20:45:09 by chnaranj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line.h"
+#include "cub.h"
 
 static char	*ft_concat(char *accum, char *read_buf)
 {
