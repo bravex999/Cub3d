@@ -6,7 +6,7 @@ INCLUDES    = -I include -I $(MLX_DIR)
 # Directorios (11 módulos del plan)
 DIR_CORE    = src/core              # hooks + cleanup + main
 DIR_UTILS   = src/utils             # utils/error
-DIR_MATH    = src/math              # math/vec2
+DIR_MATH    = src/math/scalar       
 DIR_IO      = src/io                # io/parse_cub
 DIR_VALIDATE= src/io                # io/validate_map
 DIR_GFX     = src/gfx               # gfx/mlx_init
@@ -25,7 +25,7 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 # Fuentes por módulo (ajusta a tus nombres reales)
 SRCS_CORE    = 
 SRCS_UTILS   = 
-SRCS_MATH    = 
+SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
 SRCS_IO      = 
 SRCS_VALIDATE= 
 SRCS_GFX     = 
