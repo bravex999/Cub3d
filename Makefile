@@ -5,7 +5,7 @@ INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR) -I $(DIR_GNL)
 
 DIR_CORE    = srcs/core
 DIR_UTILS   = srcs/utils
-DIR_MATH    = srcs/math/scalar       
+DIR_MATH    = srcs/math/scalar
 DIR_PARSER  = srcs/parser
 DIR_VALIDATE= srcs/validate
 DIR_GFX     = srcs/gfx
