@@ -33,7 +33,17 @@ void	headers_free(t_headers *h)
 
 int	headers_complete(const t_headers *h)
 {
-	if ((h->seen_mask & HDR_ALL) == HDR_ALL)
-		return (1);
-	return (0);
+	if (!(h->seen_mask & HDR_NO))
+		return (0);
+	if (!(h->seen_mask & HDR_SO))
+		return (0);
+	if (!(h->seen_mask & HDR_WE))
+		return (0);
+	if (!(h->seen_mask & HDR_EA))
+		return (0);
+	if (!(h->seen_mask & HDR_F))
+		return (0);
+	if (!(h->seen_mask & HDR_C))
+		return (0);
+	return (1);
 }
