@@ -34,7 +34,7 @@ const char	*skip_spaces(const char *str)
 
 	index = 0;
 	skip_spaces_plus(str, &index);
-	return (str + index);
+	return (&str[index]);
 }
 
 int	parse_rgb(const char *str, int *r, int *g, int *b)
