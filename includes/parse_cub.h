@@ -23,5 +23,7 @@ int		try_texture_no(const char *str, t_headers *h);
 int		try_texture_so(const char *str, t_headers *h);
 int		try_texture_we(const char *str, t_headers *h);
 int		try_texture_ea(const char *str, t_headers *h);
+int		try_floor_color(const char *str, t_headers *h);
+int		try_ceiling_color(const char *str, t_headers *h);
 
 #endif
