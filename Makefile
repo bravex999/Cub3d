@@ -22,7 +22,7 @@ MLX_LIB     = -L$(MLX_DIR) -lmlx_Linux -lXext -lX11 -lm -lz
 LIBFT_DIR   = libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS_CORE    = 
+SRCS_CORE    = main.c
 SRCS_UTILS   = 
 SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
 SRCS_PARSER  = parse_cub_detect.c
