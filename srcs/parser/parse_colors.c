@@ -1,6 +1,6 @@
 #include "cub.h"
 
-static void	skip_spaces_plus(const char *str, int *index)
+void	skip_spaces_plus(const char *str, int *index)
 {
 	while (str[*index] == ' ' || str[*index] == '\t')
 		(*index)++;
