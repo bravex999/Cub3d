@@ -17,4 +17,11 @@ void		headers_free(t_headers *h);
 int			headers_complete(const t_headers *h);
 int			headers_accept_line(const char *str, t_headers *h);
 
+int		match_token(const char *str, int index, const char *tok);
+char	*dup_trim_tail(const char *str, int start);
+int		try_texture_no(const char *str, t_headers *h);
+int		try_texture_so(const char *str, t_headers *h);
+int		try_texture_we(const char *str, t_headers *h);
+int		try_texture_ea(const char *str, t_headers *h);
+
 #endif
