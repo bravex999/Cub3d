@@ -69,4 +69,3 @@ int	try_texture_ea(const char *str, t_headers *h)
 	skip_spaces_plus(str, &i);
 	return (apply_tex(&str[i], h, &h->tex_ea, HDR_EA));
 }
-

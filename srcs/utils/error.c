@@ -21,4 +21,3 @@ void	error_exit(const char *msg)
 	(void)error_msg(msg);
 	exit(EXIT_FAILURE);
 }
-
