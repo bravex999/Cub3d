@@ -8,7 +8,8 @@
 # define HDR_F  16
 # define HDR_C  32
 
-typedef struct s_headers {
+typedef struct s_headers
+{
 	char	*tex_no;
 	char	*tex_so;
 	char	*tex_we;
@@ -54,10 +55,33 @@ typedef struct s_map_buffer
 	char	**lines;
 	int		count;
 	int		cap;
-}	t_map_buffer;
+}			t_map_buffer;
 
-void	map_init(t_map_buffer *map);
-int		map_push(t_map_buffer *map, const char *str);
-void	map_free(t_map_buffer *map);
+void		map_init(t_map_buffer *map);
+int			map_push(t_map_buffer *map, const char *str);
+void		map_free(t_map_buffer *map);
+
+/* parser output */
+typedef struct s_cub_raw
+{
+	char			*tex_no;
+	char			*tex_so;
+	char			*tex_we;
+	char			*tex_ea;
+	int				f_r;
+	int				f_g;
+	int				f_b;
+	int				c_r;
+	int				c_g;
+	int				c_b;
+	t_map_buffer	map;
+	int				map_h;
+}				t_cub_raw;
+
+void		cub_raw_init(t_cub_raw *out);
+int			cub_raw_set_headers(t_cub_raw *out, const t_headers *h);
+int			cub_raw_take_map(t_cub_raw *out, t_map_buffer *map);
+void		free_cub_raw(t_cub_raw *cr);
+void		free_paths(t_cub_raw *cr);
 
 #endif
