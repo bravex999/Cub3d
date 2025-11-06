@@ -11,5 +11,6 @@
 # include "scalar.h"
 # include "get_next_line.h"
 # include "parse_cub.h"
+# include <fcntl.h>
 
 #endif

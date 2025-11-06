@@ -50,12 +50,12 @@ int			try_floor_color(const char *str, t_headers *h);
 int			try_ceiling_color(const char *str, t_headers *h);
 
 /* map buffer */
-typedef struct s_map_buffer
+typedef struct s_map_buff
 {
 	char	**lines;
 	int		count;
 	int		cap;
-}			t_map_buffer;
+}			t_map_buff;
 
 void		map_init(t_map_buffer *map);
 int			map_push(t_map_buffer *map, const char *str);
@@ -83,5 +83,18 @@ int			cub_raw_set_headers(t_cub_raw *out, const t_headers *h);
 int			cub_raw_take_map(t_cub_raw *out, t_map_buffer *map);
 void		free_cub_raw(t_cub_raw *cr);
 void		free_paths(t_cub_raw *cr);
+
+/* parse_cub */
+typedef enum e_parse_stage
+{
+	ST_HEADERS,
+	ST_MAP,
+	ST_POST
+}	t_parse_stage;
+
+int			line_is_blank(const char *str);
+int			h_or_s(const char *line, t_headers *h, t_map_buf *map, int *to_map);
+int			map_or_post(const char *line, t_map_buffer *map, int *to_post);
+int			parse_cub(const char *filename, t_cub_raw *out);
 
 #endif
