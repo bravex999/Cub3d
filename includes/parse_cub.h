@@ -50,16 +50,16 @@ int			try_floor_color(const char *str, t_headers *h);
 int			try_ceiling_color(const char *str, t_headers *h);
 
 /* map buffer */
-typedef struct s_map_buff
+typedef struct s_map_buf
 {
 	char	**lines;
 	int		count;
 	int		cap;
-}			t_map_buff;
+}			t_map_buf;
 
-void		map_init(t_map_buffer *map);
-int			map_push(t_map_buffer *map, const char *str);
-void		map_free(t_map_buffer *map);
+void		map_init(t_map_buf *map);
+int			map_push(t_map_buf *map, const char *str);
+void		map_free(t_map_buf *map);
 
 /* parser output */
 typedef struct s_cub_raw
@@ -74,13 +74,13 @@ typedef struct s_cub_raw
 	int				c_r;
 	int				c_g;
 	int				c_b;
-	t_map_buffer	map;
+	t_map_buf		map;
 	int				map_h;
 }				t_cub_raw;
 
 void		cub_raw_init(t_cub_raw *out);
 int			cub_raw_set_headers(t_cub_raw *out, const t_headers *h);
-int			cub_raw_take_map(t_cub_raw *out, t_map_buffer *map);
+int			cub_raw_take_map(t_cub_raw *out, t_map_buf *map);
 void		free_cub_raw(t_cub_raw *cr);
 void		free_paths(t_cub_raw *cr);
 
@@ -94,7 +94,7 @@ typedef enum e_parse_stage
 
 int			line_is_blank(const char *str);
 int			h_or_s(const char *line, t_headers *h, t_map_buf *map, int *to_map);
-int			map_or_post(const char *line, t_map_buffer *map, int *to_post);
+int			map_or_post(const char *line, t_map_buf *map, int *to_post);
 int			parse_cub(const char *filename, t_cub_raw *out);
 
 #endif

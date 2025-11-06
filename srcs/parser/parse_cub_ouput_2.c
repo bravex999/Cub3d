@@ -1,6 +1,6 @@
 #include "cub.h"
 
-int	cub_raw_take_map(t_cub_raw *out, t_map_buffer *map)
+int	cub_raw_take_map(t_cub_raw *out, t_map_buf *map)
 {
 	out->map = *map;
 	out->map_h = out->map.count;

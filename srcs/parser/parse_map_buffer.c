@@ -22,7 +22,7 @@ static char	*dup_line_raw(const char *str)
 	return (copy);
 }
 
-static int	map_grow_to(t_map_buffer *map, int new_cap)
+static int	map_grow_to(t_map_buf *map, int new_cap)
 {
 	char	**nv;
 	int		i;
@@ -42,14 +42,14 @@ static int	map_grow_to(t_map_buffer *map, int new_cap)
 	return (0);
 }
 
-void	map_init(t_map_buffer *map)
+void	map_init(t_map_buf *map)
 {
 	map->lines = NULL;
 	map->count = 0;
 	map->cap = 0;
 }
 
-int	map_push(t_map_buffer *map, const char *str)
+int	map_push(t_map_buf *map, const char *str)
 {
 	char	*line;
 
@@ -71,7 +71,7 @@ int	map_push(t_map_buffer *map, const char *str)
 	return (0);
 }
 
-void	map_free(t_map_buffer *map)
+void	map_free(t_map_buf *map)
 {
 	int	i;
 

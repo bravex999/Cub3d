@@ -1,7 +1,7 @@
 #include "cub.h"
 
 static int	step_line(const char *line, t_headers *h,
-		t_map_buffer *map, t_parse_stage *stage)
+		t_map_buf *map, t_parse_stage *stage)
 {
 	int	to_map;
 	int	to_post;
@@ -29,7 +29,7 @@ static int	step_line(const char *line, t_headers *h,
 	return (0);
 }
 
-static int	read_loop(int fd, t_headers *h, t_map_buffer *map)
+static int	read_loop(int fd, t_headers *h, t_map_buf *map)
 {
 	char			*line;
 	t_parse_stage	stage;
@@ -54,7 +54,7 @@ static int	read_loop(int fd, t_headers *h, t_map_buffer *map)
 	return (0);
 }
 
-static int	finish_ok(t_cub_raw *out, t_headers *h, t_map_buffer *map)
+static int	finish_ok(t_cub_raw *out, t_headers *h, t_map_buf *map)
 {
 	if (cub_raw_set_headers(out, h) < 0)
 	{
@@ -76,7 +76,7 @@ int	parse_cub(const char *filename, t_cub_raw *out)
 	int				fd;
 	int				r;
 	t_headers		h;
-	t_map_buffer	map;
+	t_map_buf		map;
 
 	cub_raw_init(out);
 	headers_init(&h);
@@ -96,4 +96,3 @@ int	parse_cub(const char *filename, t_cub_raw *out)
 		return (-1);
 	return (0);
 }
-

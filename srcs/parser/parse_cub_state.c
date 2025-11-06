@@ -36,7 +36,7 @@ int	h_or_s(const char *line, t_headers *h, t_map_buf *map, int *to_map)
 	return (-1);
 }
 
-int	map_or_post(const char *line, t_map_buffer *map, int *to_post)
+int	map_or_post(const char *line, t_map_buf *map, int *to_post)
 {
 	*to_post = 0;
 	if (is_map_line(line))
@@ -52,4 +52,3 @@ int	map_or_post(const char *line, t_map_buffer *map, int *to_post)
 	}
 	return (-1);
 }
-
