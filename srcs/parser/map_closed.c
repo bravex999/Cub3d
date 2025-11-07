@@ -13,6 +13,7 @@ static int	wall_up(char **m, int h, int i, int j)
 	int		x;
 	char	c;
 
+	(void)h;
 	x = i - 1;
 	while (x >= 0)
 	{
@@ -49,6 +50,7 @@ static int	wall_left(char **m, int w, int i, int j)
 	int		y;
 	char	c;
 
+	(void)w;
 	y = j - 1;
 	while (y >= 0)
 	{

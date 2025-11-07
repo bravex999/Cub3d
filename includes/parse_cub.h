@@ -28,6 +28,8 @@ int		map_scan_spawn(char **blk, int pos[2], char *dir);
 int		map_alloc_rect(t_cub_raw *out, int w, int h);
 int		map_copy_rect(char **src, char **dst, int w, int h);
 int		map_is_closed(char **m, int w, int h);
+int		parse_precheck(const char *path);
+
 
 #endif
 

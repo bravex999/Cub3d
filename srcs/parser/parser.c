@@ -78,6 +78,8 @@ int	parse_cub(const char *path, t_cub_raw *out)
 
 	if (!path || !out)
 		return (-1);
+	if (parse_precheck(path) == -1)
+	return (-1);
 	init_cub_raw(out);
 	lines = read_lines(path);
 	if (!lines)

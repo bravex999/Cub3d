@@ -66,26 +66,23 @@ static int	range_ok(int rgb[3])
 static int	save_rgb(char id, t_cub_raw *out, int rgb[3])
 {
 	int	i;
+	int	*dst;
 
 	if (id == 'F')
+		dst = out->floor_rgb;
+	else if (id == 'C')
+		dst = out->ceiling_rgb;
+	else
+		return (-1);
+	if (dst[0] != -1)
+		return (-1);
+	i = 0;
+	while (i < 3)
 	{
-		if (out->floor_rgb[0] != -1)
-			return (-1);
-		i = 0;
-		while (i < 3)
-			out->floor_rgb[i++] = rgb[i - 1];
-		return (0);
+		dst[i] = rgb[i];
+		i++;
 	}
-	if (id == 'C')
-	{
-		if (out->ceiling_rgb[0] != -1)
-			return (-1);
-		i = 0;
-		while (i < 3)
-			out->ceiling_rgb[i++] = rgb[i - 1];
-		return (0);
-	}
-	return (-1);
+	return (0);
 }
 
 int	hdr_parse_col(char *line, t_cub_raw *out)

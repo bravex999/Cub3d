@@ -12,5 +12,6 @@
 # include "get_next_line.h"
 # include "parse_cub.h"
 # include <fcntl.h>
+# include "error.h"
 
 #endif
