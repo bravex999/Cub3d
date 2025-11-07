@@ -75,17 +75,10 @@ int	parse_cub(const char *path, t_cub_raw *out)
 {
 	char	**lines;
 	int		map_start;
-	int		i;
 
 	if (!path || !out)
 		return (-1);
-	i = 0;
-	while (i < 3)
-	{
-		out->floor_rgb[i] = -1;
-		out->ceiling_rgb[i] = -1;
-		i++;
-	}
+	init_cub_raw(out);
 	lines = read_lines(path);
 	if (!lines)
 		return (-1);
@@ -96,4 +89,3 @@ int	parse_cub(const char *path, t_cub_raw *out)
 	lines_free(lines);
 	return (0);
 }
-
