@@ -1,0 +1,32 @@
+/* parsing/map_chars.c */
+#include "cub.h"
+
+static int	is_spawn(char c)
+{
+	return (c == 'N' || c == 'S' || c == 'E' || c == 'W');
+}
+
+int	map_check_charset(char **blk)
+{
+	int		i;
+	int		j;
+	char	c;
+
+	if (!blk)
+		return (-1);
+	i = 0;
+	while (blk[i])
+	{
+		j = 0;
+		while (blk[i][j])
+		{
+			c = blk[i][j];
+			if (c != '0' && c != '1' && !is_spawn(c) && c != ' ')
+				return (-1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
