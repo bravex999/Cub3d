@@ -12,6 +12,9 @@ typedef struct s_cub_raw
 	char	**map;
 	int		map_w;
 	int		map_h;
+	int		spawn_x;
+	int		spawn_y;
+	char	spawn_dir;
 }	t_cub_raw;
 
 void	init_cub_raw(t_cub_raw *out);
@@ -25,3 +28,6 @@ int		map_scan_spawn(char **blk, int pos[2], char *dir);
 int		map_alloc_rect(t_cub_raw *out, int w, int h);
 int		map_copy_rect(char **src, char **dst, int w, int h);
 int		map_is_closed(char **m, int w, int h);
+
+#endif
+

@@ -11,6 +11,9 @@ void	init_cub_raw(t_cub_raw *out)
 	out->map = NULL;
 	out->map_w = 0;
 	out->map_h = 0;
+	out->spawn_x = -1;
+	out->spawn_y = -1;
+	out->spawn_dir = '\0';
 	i = 0;
 	while (i < 3)
 	{
@@ -19,4 +22,3 @@ void	init_cub_raw(t_cub_raw *out)
 		i++;
 	}
 }
-
