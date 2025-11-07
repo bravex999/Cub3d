@@ -98,16 +98,16 @@ int	hdr_parse_col(char *line, t_cub_raw *out)
 		p++;
 	id = *p;
 	if (id != 'F' && id != 'C')
-		return (-1);
+		return (error_msg("Invalid color identifier"));
 	p++;
 	while (*p == ' ')
 		p++;
 	if (read_rgb_values(p, rgb) == -1)
-		return (-1);
+		return (error_msg("Invalid RGB format"));
 	if (range_ok(rgb) == -1)
-		return (-1);
+		return (error_msg("RGB out of range"));
 	if (save_rgb(id, out, rgb) == -1)
-		return (-1);
+		return (error_msg("Duplicate color identifier"));
 	return (0);
 }
 

@@ -1,4 +1,3 @@
-/* parsing/map_chars.c */
 #include "cub.h"
 
 static int	is_spawn(char c)
@@ -22,11 +21,10 @@ int	map_check_charset(char **blk)
 		{
 			c = blk[i][j];
 			if (c != '0' && c != '1' && !is_spawn(c) && c != ' ')
-				return (-1);
+				return (error_msg("invalid chars found in map"));
 			j++;
 		}
 		i++;
 	}
 	return (0);
 }
-

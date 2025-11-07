@@ -40,10 +40,11 @@ int	map_scan_spawn(char **blk, int pos[2], char *dir)
 	{
 		total += count_spawn_line(blk[i], i, pos, dir);
 		if (total > 1)
-			return (-1);
+			return (error_msg("more than one player found"));
 		i++;
 	}
 	if (total == 1)
 		return (0);
-	return (-1);
+	return (error_msg("no player found"));
 }
+

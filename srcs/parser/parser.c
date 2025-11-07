@@ -79,11 +79,11 @@ int	parse_cub(const char *path, t_cub_raw *out)
 	if (!path || !out)
 		return (-1);
 	if (parse_precheck(path) == -1)
-	return (-1);
+		return (-1);
 	init_cub_raw(out);
 	lines = read_lines(path);
 	if (!lines)
-		return (-1);
+		return (error_msg("incorrect map"));
 	if (hdr_stage(lines, out, &map_start) == -1)
 		return (lines_free(lines), -1);
 	if (map_stage(lines, map_start, out) == -1)

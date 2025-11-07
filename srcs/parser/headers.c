@@ -59,7 +59,7 @@ static int	take_line(char *s, t_cub_raw *out, int *n)
 		(*n)++;
 		return (0);
 	}
-	return (-1);
+	return (error_msg("Invalid Identifier"));
 }
 
 int	hdr_stage(char **lines, t_cub_raw *out, int *map_start)
@@ -83,8 +83,10 @@ int	hdr_stage(char **lines, t_cub_raw *out, int *map_start)
 		}
 		i++;
 	}
-	if (n != 6 || *map_start == -1)
-		return (-1);
+	if (n != 6)
+		return (error_msg("Invalid headers"));
+	if (*map_start == -1)
+		return (error_msg("No map found"));
 	return (0);
 }
 

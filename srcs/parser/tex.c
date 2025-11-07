@@ -60,15 +60,17 @@ int	hdr_parse_tex(char *line, t_cub_raw *out)
 		return (-1);
 	sp = ft_split(line, ' ');
 	if (!sp || !sp[0] || !sp[1] || sp[2])
-		return (split_free(sp), -1);
+		return (split_free(sp), error_msg("Invalid texture line"));
 	if (!is_xpm(sp[1]))
-		return (split_free(sp), -1);
+		return (split_free(sp), error_msg("Invalid file extension"));
 	fd = open(sp[1], O_RDONLY);
 	if (fd < 0)
-		return (split_free(sp), -1);
+		return (split_free(sp), error_msg("Texture doesn't exist"));
 	close(fd);
 	ret = tex_save(out, sp[0], sp[1]);
 	split_free(sp);
+	if (ret == -1)
+		return (error_msg("Duplicate texture identifier"));
 	return (ret);
 }
 

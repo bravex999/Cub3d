@@ -17,10 +17,10 @@ int	parse_precheck(const char *path)
 	int	fd;
 
 	if (!has_cub_ext(path))
-		return (error_msg("Error\nFile must have .cub extension"));
+		return (error_msg("Map file must have .cub extension"));
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
-		return (error_msg("Error:\nCould not open file"));
+		return (error_msg("Could not open map"));
 	close(fd);
 	return (0);
 }
