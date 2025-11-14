@@ -17,6 +17,11 @@ typedef struct s_cub_raw
 	char	spawn_dir;
 }	t_cub_raw;
 
+/*
+** tex_*, floor_rgb, ceiling_rgb: filled by hdr_stage()
+** map, map_w/h, spawn_*:        filled by map_stage()
+*/
+
 void	init_cub_raw(t_cub_raw *out);
 int		parse_cub(const char *path, t_cub_raw *out);
 int		hdr_stage(char **lines, t_cub_raw *out, int *map_start);
@@ -29,7 +34,6 @@ int		map_alloc_rect(t_cub_raw *out, int w, int h);
 int		map_copy_rect(char **src, char **dst, int w, int h);
 int		map_is_closed(char **m, int w, int h);
 int		parse_precheck(const char *path);
-
 
 #endif
 
