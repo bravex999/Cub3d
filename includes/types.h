@@ -83,7 +83,9 @@ typedef struct s_app
 {
 	void			*mlx;
 	void			*win;
+	void			*frame_img;
 	t_scene			scene;
 	t_texture_paths	tex_paths;
 }	t_app;
+
 #endif
