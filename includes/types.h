@@ -79,4 +79,11 @@ typedef struct s_scene
 	t_image		frame;
 }	t_scene;
 
+typedef struct s_app
+{
+	void			*mlx;
+	void			*win;
+	t_scene			scene;
+	t_texture_paths	tex_paths;
+}	t_app;
 #endif
