@@ -33,7 +33,11 @@ typedef struct s_texture
 {
 	int		width;
 	int		height;
-	void	*pixels;
+	void	*img;      
+	void	*pixels;   
+	int		bpp;       
+	int		line_len;  
+	int		endian;  
 }	t_texture;
 
 typedef enum e_tex_id

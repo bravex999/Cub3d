@@ -21,6 +21,7 @@
 # include "get_next_line.h"
 # include "parse_cub.h"
 # include "core.h"
+# include "textures.h"
 # include <fcntl.h>
 # include "error.h"
 # include <X11/X.h>
