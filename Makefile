@@ -1,6 +1,6 @@
 NAME        = cub3d
 CC          = cc
-CFLAGS      = -Wall -Werror -Wextra
+CFLAGS      = -Wall -Werror -Wextra -g2 -O0 -fsanitize=address,undefined
 INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR) -I $(DIR_GNL)
 
 DIR_CORE    = srcs/core
@@ -22,7 +22,7 @@ MLX_LIB     = -L$(MLX_DIR) -lmlx_Linux -lXext -lX11 -lm -lz
 LIBFT_DIR   = libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS_CORE    = main.c scene_init.c scene_init_2.c app_init_gfx.c
+SRCS_CORE    = main.c scene_init.c scene_init_2.c app_init_gfx.c app_init_raw.c
 SRCS_UTILS   = error.c 
 SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
 SRCS_PARSER  = colors.c  headers.c  init.c  map_build.c  map_chars.c  map_closed_2.c  map_closed.c  map_spawn.c  map_stage.c  parse_precheck.c  parser.c  tex.c 
