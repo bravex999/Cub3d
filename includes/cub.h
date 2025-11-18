@@ -23,6 +23,7 @@
 # include "core.h"
 # include "textures.h"
 # include "frame.h"
+# include "render.h"
 # include <fcntl.h>
 # include "error.h"
 # include <X11/X.h>

@@ -30,7 +30,7 @@ SRCS_VALIDATE=
 SRCS_GFX     = frame_back_color.c 
 SRCS_TEX     = text_load.c
 SRCS_CAMERA  = 
-SRCS_RENDER  = 
+SRCS_RENDER  = draw_column_solid.c  raycast.c  raycast_utils.c  render_frame.c 
 SRCS_INPUT   = 
 SRCS_GNL     = get_next_line.c
 	
