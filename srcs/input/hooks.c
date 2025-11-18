@@ -19,6 +19,7 @@ int	app_close_window(t_app *app)
 {
 	if (!app)
 		return (0);
+	app_destroy(app);
 	destroy_images(app);
 	if (app->win)
 		mlx_destroy_window(app->mlx, app->win);
@@ -27,8 +28,6 @@ int	app_close_window(t_app *app)
 		mlx_destroy_display(app->mlx);
 		free(app->mlx);
 	}
-	/*cleanup general
-	 *cleanup */
 	exit(0);
 	return (0);
 }
