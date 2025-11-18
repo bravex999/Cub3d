@@ -73,6 +73,16 @@ typedef struct s_player
 	t_vec2	plane;
 }	t_player;
 
+typedef struct s_keys
+{
+    int w;
+    int a;
+    int s;
+    int d;
+    int left;
+    int right;
+}   t_keys;
+
 typedef struct s_scene
 {
 	t_map		map;
@@ -90,6 +100,7 @@ typedef struct s_app
 	void			*frame_img;
 	t_scene			scene;
 	t_texture_paths	tex_paths;
+	t_keys			keys;
 }	t_app;
 
 #endif

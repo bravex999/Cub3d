@@ -7,10 +7,9 @@ DIR_CORE    = srcs/core
 DIR_UTILS   = srcs/utils
 DIR_MATH    = srcs/math/scalar
 DIR_PARSER  = srcs/parser
-DIR_VALIDATE= srcs/validate
 DIR_GFX     = srcs/gfx
 DIR_TEX     = srcs/textures
-DIR_CAMERA  = srcs/camera
+DIR_PLAYER  = srcs/player
 DIR_RENDER  = srcs/render
 DIR_INPUT   = srcs/input
 DIR_GNL		= srcs/gnl
@@ -26,12 +25,11 @@ SRCS_CORE    = main.c scene_init.c scene_init_2.c app_init_gfx.c app_init_raw.c
 SRCS_UTILS   = error.c 
 SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
 SRCS_PARSER  = colors.c  headers.c  init.c  map_build.c  map_chars.c  map_closed_2.c  map_closed.c  map_spawn.c  map_stage.c  parse_precheck.c  parser.c  tex.c 
-SRCS_VALIDATE= 
 SRCS_GFX     = frame_back_color.c 
 SRCS_TEX     = text_load.c
-SRCS_CAMERA  = 
+SRCS_PLAYER  = player_move.c  player_rotate.c
 SRCS_RENDER  = draw_column_solid.c  raycast.c  raycast_utils.c  render_frame.c 
-SRCS_INPUT   = 
+SRCS_INPUT   = hooks.c
 SRCS_GNL     = get_next_line.c
 	
 
@@ -40,10 +38,9 @@ SRCS = \
   $(addprefix $(DIR_UTILS)/,$(SRCS_UTILS)) \
   $(addprefix $(DIR_MATH)/,$(SRCS_MATH)) \
   $(addprefix $(DIR_PARSER)/,$(SRCS_PARSER)) \
-  $(addprefix $(DIR_VALIDATE)/,$(SRCS_VALIDATE)) \
   $(addprefix $(DIR_GFX)/,$(SRCS_GFX)) \
   $(addprefix $(DIR_TEX)/,$(SRCS_TEX)) \
-  $(addprefix $(DIR_CAMERA)/,$(SRCS_CAMERA)) \
+  $(addprefix $(DIR_PLAYER)/,$(SRCS_PLAYER)) \
   $(addprefix $(DIR_RENDER)/,$(SRCS_RENDER)) \
   $(addprefix $(DIR_INPUT)/,$(SRCS_INPUT)) \
   $(addprefix $(DIR_GNL)/,$(SRCS_GNL))

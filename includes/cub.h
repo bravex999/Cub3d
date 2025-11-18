@@ -25,6 +25,7 @@
 # include "frame.h"
 # include "render.h"
 # include "player.h"
+# include "input.h"
 # include <fcntl.h>
 # include "error.h"
 # include <X11/X.h>
