@@ -1,6 +1,6 @@
 NAME        = cub3d
 CC          = cc
-CFLAGS      = -Wall -Werror -Wextra -g2 -O0 -fsanitize=address,undefined
+CFLAGS      = -Wall -Werror -Wextra -g
 INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR) -I $(DIR_GNL)
 
 DIR_CORE    = srcs/core
@@ -14,7 +14,7 @@ DIR_RENDER  = srcs/render
 DIR_INPUT   = srcs/input
 DIR_GNL		= srcs/gnl
 
-# MiniLibX (Linux)
+# MiniLibX 
 MLX_DIR     = libs/mlx/minilibx-linux
 MLX_LIB     = -L$(MLX_DIR) -lmlx_Linux -lXext -lX11 -lm -lz
 

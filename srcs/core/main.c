@@ -10,6 +10,8 @@ int	main(int argc, char **argv)
 	t_cub_raw	raw;
 	t_app		app;
 
+	ft_bzero(&raw, sizeof(t_cub_raw));
+	ft_bzero(&app, sizeof(t_app));
 	if (argc != 2)
 		return (print_usage());
 	if (parse_cub(argv[1], &raw) == -1)
