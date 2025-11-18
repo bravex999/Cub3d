@@ -20,7 +20,8 @@ static void	perform_dda(t_scene *scene, t_dda *dda, int *side)
 	}
 }
 
-t_rayhit	cast_single_ray(t_scene *scene, double ray_dir_x, double ray_dir_y)
+t_rayhit	cast_single_ray(t_scene *scene,
+				double ray_dir_x, double ray_dir_y)
 {
 	t_dda		dda;
 	t_rayhit	hit;
@@ -42,6 +43,7 @@ t_rayhit	cast_single_ray(t_scene *scene, double ray_dir_x, double ray_dir_y)
 	if (hit.perp_dist < 0.0001)
 		hit.perp_dist = 0.0001;
 	hit.side = side;
+	hit.ray_dir_x = ray_dir_x;
+	hit.ray_dir_y = ray_dir_y;
 	return (hit);
 }
-

@@ -17,6 +17,8 @@ typedef struct s_rayhit
 {
 	double	perp_dist;
 	int		side;
+	double	ray_dir_x;
+	double	ray_dir_y;
 }	t_rayhit;
 
 void		render_frame(t_app *app);
