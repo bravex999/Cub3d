@@ -47,4 +47,3 @@ int	map_scan_spawn(char **blk, int pos[2], char *dir)
 		return (0);
 	return (error_msg("no player found"));
 }
-

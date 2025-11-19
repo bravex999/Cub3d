@@ -1,14 +1,8 @@
 #ifndef CUB_H
 # define CUB_H
 
-#ifndef WIN_W
 # define WIN_W 750
-#endif
-
-#ifndef WIN_H
 # define WIN_H 620
-#endif
-
 
 # include <math.h>
 # include <stdlib.h>

@@ -33,11 +33,11 @@ typedef struct s_texture
 {
 	int		width;
 	int		height;
-	void	*img;      
-	void	*pixels;   
-	int		bpp;       
-	int		line_len;  
-	int		endian;  
+	void	*img;
+	void	*pixels;
+	int		bpp;
+	int		line_len;
+	int		endian;
 }	t_texture;
 
 typedef enum e_tex_id
@@ -75,13 +75,13 @@ typedef struct s_player
 
 typedef struct s_keys
 {
-    int w;
-    int a;
-    int s;
-    int d;
-    int left;
-    int right;
-}   t_keys;
+	int	w;
+	int	a;
+	int	s;
+	int	d;
+	int	left;
+	int	right;
+}	t_keys;
 
 typedef struct s_scene
 {

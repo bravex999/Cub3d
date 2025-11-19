@@ -19,4 +19,3 @@ int	app_init_from_raw(t_app *app, const t_cub_raw *raw)
 	app_init_tex_paths(&app->tex_paths, raw);
 	return (0);
 }
-

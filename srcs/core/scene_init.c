@@ -56,4 +56,3 @@ int	scene_init_from_raw(t_scene *scene, const t_cub_raw *raw)
 	scene_init_tex_frame(scene);
 	return (0);
 }
-

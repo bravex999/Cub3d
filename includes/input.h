@@ -7,4 +7,3 @@ int	app_update(t_app *app);
 int	app_close_window(t_app *app);
 
 #endif
-

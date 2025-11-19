@@ -13,4 +13,3 @@ void	player_rotate_left(t_scene *scene);
 void	player_rotate_right(t_scene *scene);
 
 #endif
-

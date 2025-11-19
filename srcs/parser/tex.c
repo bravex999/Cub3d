@@ -73,4 +73,3 @@ int	hdr_parse_tex(char *line, t_cub_raw *out)
 		return (error_msg("Duplicate texture identifier"));
 	return (ret);
 }
-

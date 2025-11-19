@@ -89,4 +89,3 @@ int	hdr_stage(char **lines, t_cub_raw *out, int *map_start)
 		return (error_msg("No map found"));
 	return (0);
 }
-

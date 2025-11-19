@@ -69,4 +69,3 @@ void	player_strafe_right(t_scene *scene)
 	if (is_valid_cell(scene, scene->player.pos.x, new_y))
 		scene->player.pos.y = new_y;
 }
-

@@ -89,4 +89,3 @@ int	map_is_closed(char **m, int w, int h)
 	}
 	return (0);
 }
-

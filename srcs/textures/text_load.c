@@ -50,4 +50,3 @@ int	app_load_textures(t_app *app)
 		return (-1);
 	return (0);
 }
-

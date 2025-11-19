@@ -32,4 +32,3 @@ int	main(int argc, char **argv)
 	free_error(&raw, NULL);
 	return (0);
 }
-

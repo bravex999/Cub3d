@@ -11,4 +11,3 @@ typedef struct s_app	t_app;
 int	app_load_textures(t_app *app);
 
 #endif
-

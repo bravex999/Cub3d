@@ -33,4 +33,3 @@ void	player_rotate_right(t_scene *scene)
 	scene->player.plane.y = old_plane_x * sin(ROT_SPEED)
 		+ scene->player.plane.y * cos(ROT_SPEED);
 }
-

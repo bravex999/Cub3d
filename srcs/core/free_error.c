@@ -34,4 +34,3 @@ int	free_error(t_cub_raw *raw, t_app *app)
 		free_cub_raw(raw);
 	return (1);
 }
-

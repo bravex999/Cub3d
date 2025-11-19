@@ -110,4 +110,3 @@ int	hdr_parse_col(char *line, t_cub_raw *out)
 		return (error_msg("Duplicate color identifier"));
 	return (0);
 }
-

@@ -44,4 +44,3 @@ void	frame_clear(t_image *frame, int ceiling_c, int floor_c)
 	frame_fill_half(frame, ceiling_c, 0, half);
 	frame_fill_half(frame, floor_c, half, frame->height);
 }
-

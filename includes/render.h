@@ -33,4 +33,3 @@ void		step_ray(t_dda *dda, int *side);
 int			check_hit(t_scene *scene, t_dda *dda, int *hit);
 
 #endif
-

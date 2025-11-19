@@ -67,4 +67,3 @@ int	check_hit(t_scene *scene, t_dda *dda, int *hit)
 	}
 	return (0);
 }
-

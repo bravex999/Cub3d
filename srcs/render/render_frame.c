@@ -40,4 +40,3 @@ void	render_frame(t_app *app)
 	}
 	mlx_put_image_to_window(app->mlx, app->win, app->frame_img, 0, 0);
 }
-

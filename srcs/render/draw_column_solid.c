@@ -97,4 +97,3 @@ void	draw_column_solid(t_scene *scene, t_rayhit *hit, int x)
 	init_ctx(scene, hit, tex, &ctx);
 	draw_tex_column(scene, tex, &ctx, x);
 }
-

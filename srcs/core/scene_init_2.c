@@ -43,4 +43,3 @@ void	scene_init_dir(t_player *pl, char dir)
 	else
 		scene_init_ew(pl, dir);
 }
-

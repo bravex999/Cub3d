@@ -46,4 +46,3 @@ int	app_init_gfx(t_app *app)
 		return (-1);
 	return (0);
 }
-
