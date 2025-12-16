@@ -1,7 +1,7 @@
 /* srcs/parser/map_closed.c */
 #include "cub.h"
 
-int	wall_right(char **m, int w, int i, int j); // declaración
+int	wall_right(char **m, int w, int i, int j);
 
 static int	is_walkable(char c)
 {
