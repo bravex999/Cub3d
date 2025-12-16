@@ -23,9 +23,9 @@ int	main(int argc, char **argv)
 	if (app_load_textures(&app) == -1)
 		return (free_error(&raw, &app));
 	render_frame(&app);
-	mlx_hook(app.win, 2, 1L << 0, app_key_press, &app);
-	mlx_hook(app.win, 3, 1L << 1, app_key_release, &app);
-	mlx_hook(app.win, 17, 0, app_close_window, &app);
+	mlx_hook(app.win, KeyPress, KeyPressMask, app_key_press, &app);
+	mlx_hook(app.win, KeyRelease, KeyReleaseMask, app_key_release, &app);
+	mlx_hook(app.win, DestroyNotify, NoEventMask, app_close_window, &app);	
 	mlx_loop_hook(app.mlx, app_update, &app);
 	mlx_loop(app.mlx);
 	app_destroy(&app);
