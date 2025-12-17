@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	render_frame(&app);
 	mlx_hook(app.win, KeyPress, KeyPressMask, app_key_press, &app);
 	mlx_hook(app.win, KeyRelease, KeyReleaseMask, app_key_release, &app);
-	mlx_hook(app.win, DestroyNotify, NoEventMask, app_close_window, &app);	
+	mlx_hook(app.win, DestroyNotify, NoEventMask, app_close_window, &app);
 	mlx_loop_hook(app.mlx, app_update, &app);
 	mlx_loop(app.mlx);
 	app_destroy(&app);
