@@ -18,6 +18,7 @@ int	main(int argc, char **argv)
 		return (free_error(&raw, NULL));
 	if (app_init_from_raw(&app, &raw) == -1)
 		return (free_error(&raw, &app));
+	ft_bzero(&raw, sizeof(t_cub_raw));
 	if (app_init_gfx(&app) == -1)
 		return (free_error(&raw, &app));
 	if (app_load_textures(&app) == -1)
