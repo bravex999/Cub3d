@@ -5,7 +5,6 @@ INCLUDES    = -I includes -I $(MLX_DIR) -I $(LIBFT_DIR) -I $(DIR_GNL)
 
 DIR_CORE    = srcs/core
 DIR_UTILS   = srcs/utils
-DIR_MATH    = srcs/math/scalar
 DIR_PARSER  = srcs/parser
 DIR_GFX     = srcs/gfx
 DIR_TEX     = srcs/textures
@@ -23,7 +22,6 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 
 SRCS_CORE    = main.c scene_init.c scene_init_2.c app_init_gfx.c app_init_raw.c app_destroy.c free_error.c
 SRCS_UTILS   = error.c 
-SRCS_MATH    = scalar_angle.c scalar_clamp.c scalar_norm.c scalar_normalize.c
 SRCS_PARSER  = colors.c  headers.c  init.c  map_build.c  map_chars.c  map_closed_2.c  map_closed.c  map_spawn.c  map_stage.c  parse_precheck.c  parser.c  tex.c 
 SRCS_GFX     = frame_back_color.c 
 SRCS_TEX     = text_load.c
@@ -36,7 +34,6 @@ SRCS_GNL     = get_next_line.c
 SRCS = \
   $(addprefix $(DIR_CORE)/,$(SRCS_CORE)) \
   $(addprefix $(DIR_UTILS)/,$(SRCS_UTILS)) \
-  $(addprefix $(DIR_MATH)/,$(SRCS_MATH)) \
   $(addprefix $(DIR_PARSER)/,$(SRCS_PARSER)) \
   $(addprefix $(DIR_GFX)/,$(SRCS_GFX)) \
   $(addprefix $(DIR_TEX)/,$(SRCS_TEX)) \

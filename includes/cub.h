@@ -11,7 +11,6 @@
 # include "libft.h"
 # include "utils/error.h"
 # include "types.h"
-# include "scalar.h"
 # include "get_next_line.h"
 # include "parse_cub.h"
 # include "core.h"
