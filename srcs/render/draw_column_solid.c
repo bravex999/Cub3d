@@ -1,15 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   draw_column_solid.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chnaranj <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/22 16:15:07 by chnaranj          #+#    #+#             */
+/*   Updated: 2025/12/22 16:20:50 by chnaranj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <math.h>
 #include "cub.h"
 #include "frame.h"
 #include "render.h"
-
-typedef struct s_colctx
-{
-	int	line_height;
-	int	start;
-	int	end;
-	int	tex_x;
-}	t_colctx;
 
 static t_tex_id	get_tex_id(t_rayhit *hit)
 {

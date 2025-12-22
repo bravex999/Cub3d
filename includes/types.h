@@ -6,7 +6,7 @@
 /*   By: chnaranj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 15:55:33 by chnaranj          #+#    #+#             */
-/*   Updated: 2025/12/22 15:55:35 by chnaranj         ###   ########.fr       */
+/*   Updated: 2025/12/22 16:18:17 by chnaranj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define TYPES_H
 
 # include <stdbool.h>
+
+typedef struct s_colctx
+{
+	int	line_height;
+	int	start;
+	int	end;
+	int	tex_x;
+}	t_colctx;
 
 typedef struct s_vec2
 {
