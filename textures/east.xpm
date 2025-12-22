@@ -2,7 +2,7 @@
 static const char *east[] = {
 /* columns rows colors chars-per-pixel */
 "64 64 1 1 ",
-"  c green",
+"  c #7FFF00",
 /* pixels */
 "                                                                ",
 "                                                                ",

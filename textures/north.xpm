@@ -2,7 +2,7 @@
 static const char *north[] = {
 /* columns rows colors chars-per-pixel */
 "64 64 1 1 ",
-"  c blue",
+"  c #00F5FF",
 /* pixels */
 "                                                                ",
 "                                                                ",

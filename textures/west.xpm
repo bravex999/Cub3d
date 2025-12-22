@@ -2,7 +2,7 @@
 static const char *west[] = {
 /* columns rows colors chars-per-pixel */
 "64 64 1 1 ",
-"  c white",
+"  c #9D00FF",
 /* pixels */
 "                                                                ",
 "                                                                ",
